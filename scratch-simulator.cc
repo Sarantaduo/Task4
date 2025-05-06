@@ -45,11 +45,6 @@
     ueDevs = lteHelper->InstallUeDevice(ueNodes);
     lteHelper->Attach(ueDevs, enbDevs.Get(0));
 
-    //создание bearera 
-    enum EpsBearer::Qci q = EpsBearer::GBR_CONV_VOICE;
-    EpsBearer bearer(q);
-    lteHelper->ActivateDataRadioBearer(ueDevs, bearer);
-    
 
     InternetStackHelper internet;
     internet.Install(ueNodes);
